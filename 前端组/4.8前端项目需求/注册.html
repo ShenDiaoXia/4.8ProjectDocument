@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>教育培训机构</title>
+	<meta charset=utf-8>
+	<style type="text/css">
+	.l{
+      background-color:#46a3ff;
+	}
+	a{
+		text-decoration: none;
+	}
+    .l1{
+    	background-color: #46a3ff;
+    	color: white;
+    	border:none;
+    }
+    .d{
+    	position: absolute;
+    	top:10%;
+	    left: 30%;
+    }
+	</style> 
+	<script language="JavaScript">
+ function mycheck(){
+  if(form1.name.value==""){
+  alert("姓名不能为空！");
+  form1.name.focus();
+  return false;
+ }
+ if(form1.age.value==""){
+ 	alert("年龄不能为空！")
+ 	form1.age.focus;
+ 	return false;
+ }
+ if(form1.username.value==""){
+ 	alert("注册账号不能为空！")
+ 	form1.username.focus();
+ 	return false;
+ }
+ if(form1.pas1.value==""){
+ 	alert("注册密码不能为空！")
+ 	form1.pas1.focus();
+ 	return false;
+ }
+ if(form1.pas1.value!=form1.pas2.value){
+ 	alert("两次密码不一致！")
+ 	form1.pas2.focus();
+ 	return false;
+ }
+ if(form1.email.value==""){
+ 	alert("邮箱不能为空！")
+ 	form1.email.focus();
+ 	return false;
+ }
+
+ if(form1.answer.value==""){
+ 	alert("答案不能为空！")
+ 	form1.answer.focus();
+ 	return false;
+ }
+ else{
+ 	window.open('successful.html');
+ }
+}
+ </script>
+</head>
+<body>
+<div class="d">
+</br>
+</br>
+<table width="400" height="30">
+<form name="form1" action="" method="post">
+<tr align="center">
+<td>
+<input type="text" name="name"  placeholder="姓名" size="20" maxlength="20">
+</td>
+</tr>
+</table>
+<table width="400" height="30">
+<tr>
+<td>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;性别  <input type="radio" name="sex" value="radio" checked="checked"> 男
+      <input type="radio" name="sex" > 女
+      </td>
+      </tr>
+</table>
+<table width="400" height="30">
+ <tr align="center">
+ <td>
+<input type="text" name="age" value="" placeholder="年龄" size="20" maxlength="20"> 
+</td>
+</tr>
+</table>
+<table width="400" height="35">
+<tr align="center">
+<td>
+<input type="text" name="username" value="" placeholder="注册账号" size="20" maxlength="20">
+</td>
+</tr>
+</table>
+<table width="400" height="35">
+<tr align="center">
+<td>
+<input type="password" name="pas1" value="" placeholder="注册密码" size="20" maxlength="20">
+</td>
+</tr>
+</table>
+<table width="400" height="35">
+<tr align="center">
+<td>
+<input type="password" name="pas2" value=""  placeholder="确认密码"size="20" maxlength="20">
+</td>
+</tr>
+</table>
+<table width="400" height="35">
+<tr align="center">
+<td>
+<input type="text" name="email" value="" size="20"  placeholder="邮箱"maxlength="20">
+</td>
+</tr>
+</table>
+<table width="400" height="20">
+<tr>
+<td  align="center">
+	<h5><nobr><font color="black">密保问题&nbsp;&nbsp;&nbsp;<font color="#8e8e8e">(用于忘记密码时找回密码)</nobr></h5>
+	</td>
+	</tr
+	</table>
+	<table width="400" height="35">
+	<tr align="center">
+	<td>
+	<select name="question">
+		<option value="question" selected="selected">妈妈叫什么名字？</option>
+		<option value="question" >爸爸叫什么名字？</option>
+		<option value="question" >小学班主任叫什么名字？</option>
+		<option value="question" >你的家乡在哪儿？</option>
+		<option value="question" >你的理想是什么？</option>
+	</select>
+	</td>
+	</tr>
+</table>
+</br>
+<table width="400" height="35">
+<tr align="center">
+<td>
+<input type="text" name="answer" value="" placeholder="输入答案"  size="20" maxlength="20">
+</td>
+</tr>
+</form>
+</table>
+</br>
+<table width="400" height="50">
+	<tr bgcolor="#46a3ff">
+     <td align="center">
+     	 <input type="submit" name="button" value="注册" class="l1" onclick="return mycheck()"> 
+     </td>
+	</tr>
+</table>
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<base target="_blank">
+<body>
+<p>
+	<br />
+程序自带FTP服务器，支持多用户，无需再安装FTP服务器。自带网站挂马监视器，随时记录文件的修改情况，让挂马文件无处可逃。
+</p>
+<p>
+	不是管理员administrator的用户，请<b>右键以管理员身份运行</b>。win8最好以管理员身份运行。牵扯到服务进程的管理必须以管理员身份运行。
+</p>
+<p>
+	端口问题无法启动时，请使用菜单『<b>环境端口检测</b>』进行端口检测，尝试启动。最重要的一点，你的机子一定要安装VC9运行库,phpStudy安装路径不得有汉字。
+</p>
+<p>
+	启动失败，原因一是防火墙拦截，二是80端口已经被别的程序占用，如IIS，迅雷等；三是没有安装VC9运行库,php和apache都是VC9编译。解决以上三个问题，99%能一次性安装成功
+</p>
+<p>
+	为了减少出错安装路径不得有<b>汉字</b>，如有防火墙开启，会提示是否信任httpd、mysqld运行，请选择全部允许。
+</p>
+<p>
+	由于牵扯到注册服务、自解压等，个别弱智傻X杀毒卫士会误报病毒，不放心的可以安装后自行扫描。
+</p>
+<p>
+	32位的VC9运行库下载：<a href="http://www.microsoft.com/zh-CN/download/details.aspx?id=5582">http://www.microsoft.com/zh-CN/download/details.aspx?id=5582</a><br />
+64位的VC9运行库下载：<a href="http://www.microsoft.com/zh-CN/download/details.aspx?id=15336">http://www.microsoft.com/zh-CN/download/details.aspx?id=15336</a> 
+</p>
+
+
+<p>
+	不能启动 参照：<a href="http://www.phpstudy.net/a.php/184.html">http://www.phpstudy.net/a.php/184.html</a> 
+</p>
+<p>
+	&nbsp;
+</p>
+<p>
+	====phpStudy提示没安装Zend或<strong>Zend Optimizer not Installed</strong>======<br />
+phpStudy是自带Zend Optimizer和Zend Guard Loader，<br />
+但是php5.3及以后的版本Zend Optimizer改名Zend Guard Loader。 <br />
+php5.3及以后的版本Zend Optimizer改名Zend Guard Loader。 <br />
+是zend官方改名不是我改的哟。 <br />
+也就是说需要Zend Optimizer的程序将不能安装到php5.3以后的版本。 <br />
+所以下载phpStudy之后切换到php5.2即可解决问题。 <br />
+需要Zend Guard Loader的切换到php5.3和php5.4，但是必须是以fastcgi模式运行<br />
+参照：<a href="http://www.phpstudy.net/a.php/181.html">http://www.phpstudy.net/a.php/181.html</a> 
+</p>
+<p>
+	<br />
+====<strong>IIS7快速安装PHP</strong>及phpStudy注意事项=======<br />
+phpStudy是支持win7和win2008的IIS7。已经测试过N次了。<br />
+但是在安装前要注意激活FastCGI 模块<br />
+默认安装的 IIS 中 FastCGI 模块被关闭。要激活其的步骤在不同版本的 Windows 下不同。
+</p>
+<p>
+	要在 Windows Vista SP1 和 Windows 7 中激活 FastCGI 支持：<br />
+在 Windows 开始菜单中选择“运行...”（或在搜索框内），输入“optionalfeatures.exe”并按“确定”（或敲回车键）；<br />
+在“Windows 功能”对话框中展开“Internet 信息服务”，“万维网服务”，“应用程序开发功能”，并选中“CGI”的选择框；<br />
+点击确定按钮并等待安装完成。
+</p>
+<p>
+	要在 Windows Server 2008 和 Windows Server 2008 R2 中激活 FastCGI 支持：<br />
+在 Windows 开始菜单中选择 "运行:"，输入 "CompMgmtLauncher" 并点击 "确定"；<br />
+或 打开服务器管理器－添加角色－Web 服务器（IIS），再勾选CGI后安装
+</p>
+<p>
+	激活FastCGI 模块后切换到phpstudy的IIS7+php5.2-5.5即可
+</p>
+<p>
+	参照：<a href="http://www.phpstudy.net/a.php/182.html">http://www.phpstudy.net/a.php/182.html</a> 
+</p>
+<p>
+	<br />
+=====有问题的请仔细阅读下面内容。=================
+</p>
+<p>
+	1. 如何调试打开PHP<br />
+2. 无法正常启动时<br />
+3. 如何修改端口<br />
+4. 修改或重置MySQL密码<br />
+5. 快速建立MySQL数据库<br />
+6. 如何添加多站点<br />
+7. 如何控制单一启停<br />
+8. 重装系统后启动<br />
+9. 如何更新升级<br />
+10. 提示没安装Zend或Zend Optimizer not Installed<br />
+11. IIS7快速安装PHP及注意事项<br />
+12. 如何禁止或允许站点目录列表<br />
+13. 自带Ftp Server如何使用<br />
+14. 自带挂马监视器如何使用
+</p>
+<p>
+	&nbsp;
+</p>
+<p>
+	1. 如何调试打开PHP<br />
+简单一句话php跟txt(文本文档)一样,记事本就可以打开，<br />
+但看到的就是代码，而不是php执行后的效果了；<br />
+我们建议用dreameweaver或editplus等支持utf8格式文件的软件打开。<br />
+如何大家是本地测试php代码的，安装以后将php文件复制到WWW目录，<br />
+在浏览器中输入参照：<a href="http://127.0.0.1">http://127.0.0.1</a> 或 参照：<a href="http://localhost/">http://localhost/</a> 即可预览你写的PHP程序。<br />
+phpStudy可以通过菜单『网站根目录』快速定位到WWW目录。<br />
+参照：<a href="http://www.phpstudy.net/a.php/183.html">http://www.phpstudy.net/a.php/183.html</a><br />
+&nbsp;<br />
+2. 无法正常启动时
+</p>
+<p>
+	请使用『其他选项菜单』-『强制启动端口』进行检测，尝试启动。<br />
+参照：<a href="http://www.phpstudy.net/a.php/184.html">http://www.phpstudy.net/a.php/184.html</a> 
+</p>
+<p>
+	3. 如何修改端口<br />
+&nbsp;请使用『其他选项菜单』-『phpStudy设置』-『端口常规设置』。<br />
+参照：<a href="http://www.phpstudy.net/a.php/185.html">http://www.phpstudy.net/a.php/185.html</a> 
+</p>
+<p>
+	4. 修改或重置MySQL密码<br />
+&nbsp;MySQL用户名和密码默认都是root
+</p>
+<p>
+	&nbsp;修改mysql密码<br />
+&nbsp;请使用『其他选项菜单』-『MySQL设置』-『设置或修改密码』 。
+</p>
+<p>
+	&nbsp;重置MySQL密码(忘记密码时使用)<br />
+&nbsp;请使用『其他选项菜单』-『MySQL工具』-『重置密码』。<br />
+参照：<a href="http://www.phpstudy.net/a.php/186.html">http://www.phpstudy.net/a.php/186.html</a> 
+</p>
+<p>
+	5. 快速建立MySQL数据库<br />
+&nbsp; 请使用『其他选项菜单』-『MySQL设置』-『快速创建数据库』。<br />
+参照：<a href="http://www.phpstudy.net/a.php/187.html">http://www.phpstudy.net/a.php/187.html</a> 
+</p>
+<p>
+	6. 如何添加多站点<br />
+&nbsp;请使用『其他选项菜单』-『站点域名管理』。<br />
+参照：<a href="http://www.phpstudy.net/a.php/188.html">http://www.phpstudy.net/a.php/188.html</a> 
+</p>
+<p>
+	7. 如何控制单一启停<br />
+&nbsp; 在『启动』、『停止』、『重启』三个启停按钮上[右键]可以进行有选择地启停。<br />
+参照：<a href="http://www.phpstudy.net/a.php/189.html">http://www.phpstudy.net/a.php/189.html</a> 
+</p>
+<p>
+	8. 重装系统后启动<br />
+重装系统后或相关服务丢失时，只需要点一下『运行模式-应用』即可，无需重新安装。<br />
+参照：<a href="http://www.phpstudy.net/a.php/190.html">http://www.phpstudy.net/a.php/190.html</a> 
+</p>
+<p>
+	9. 如何更新升级<br />
+升级前先导出站点域名『其他选项菜单』-『站点域名管理』。<br />
+从官方网站下载最新版，原路径安装即可，不会覆盖你的程序和数据库；<br />
+安装后再从『站点域名管理』导入域名点『保存生成配置文件』，然后将MySQL密码修改成你现在的密码即可。<br />
+参照：<a href="http://www.phpstudy.net/a.php/191.html">http://www.phpstudy.net/a.php/191.html</a> 
+</p>
+<p>
+	10. 提示没安装Zend或Zend Optimizer not Installed
+</p>
+<p>
+	phpStudy是自带Zend Optimizer和Zend Guard Loader，<br />
+但是php5.3及以后的版本Zend Optimizer改名Zend Guard Loader。 <br />
+php5.3及以后的版本Zend Optimizer改名Zend Guard Loader。 <br />
+是zend官方改名不是我改的哟。 <br />
+也就是说需要Zend Optimizer的程序将不能安装到php5.3以后的版本。 <br />
+所以下载phpStudy之后切换到php5.2即可解决问题。 <br />
+需要Zend Guard Loader的切换到php5.3和php5.4，但是必须是以fastcgi模式运行<br />
+参照：<a href="http://www.phpstudy.net/a.php/181.html">http://www.phpstudy.net/a.php/181.html</a> 
+</p>
+<p>
+	11. IIS7快速安装PHP及注意事项<br />
+phpStudy是支持win7和win2008的IIS7。已经测试过N次了。<br />
+但是在安装前要注意激活FastCGI 模块<br />
+默认安装的 IIS 中 FastCGI 模块被关闭。要激活其的步骤在不同版本的 Windows 下不同。
+</p>
+<p>
+	要在 Windows Vista SP1 和 Windows 7 中激活 FastCGI 支持：<br />
+在 Windows 开始菜单中选择“运行...”（或在搜索框内），输入“optionalfeatures.exe”并按“确定”（或敲回车键）；<br />
+在“Windows 功能”对话框中展开“Internet 信息服务”，“万维网服务”，“应用程序开发功能”，并选中“CGI”的选择框；<br />
+点击确定按钮并等待安装完成。
+</p>
+<p>
+	要在 Windows Server 2008 和 Windows Server 2008 R2 中激活 FastCGI 支持：<br />
+在 Windows 开始菜单中选择 "运行:"，输入 "CompMgmtLauncher" 并点击 "确定"；<br />
+或 打开服务器管理器－添加角色－Web 服务器（IIS），再勾选CGI后安装
+</p>
+<p>
+	激活FastCGI 模块后切换到phpstudy的IIS7+php5.2-5.5即可
+</p>
+<p>
+	参照：<a href="http://www.phpstudy.net/a.php/182.html">http://www.phpstudy.net/a.php/182.html</a> 
+</p>
+<p>
+	12. 如何禁止或允许站点目录列表
+</p>
+<p>
+	&nbsp;请使用『其他选项菜单』-『phpStudy设置』-『允许目录列表』，打上对勾表示允许目录列表，去掉对勾表示禁止目录列表。<br />
+参照：<a href="http://www.phpstudy.net/a.php/192.html">http://www.phpstudy.net/a.php/192.html</a> 
+</p>
+<p>
+	13. 自带Ftp Server如何使用
+</p>
+<p>
+	使用『其他选项菜单』-『phpStudy设置』-『Ftp Serv管理器』<br />
+用户设置，FTP设置，IP限制等都在菜单设置下。 <br />
+参照：<a href="http://www.phpstudy.net/a.php/193.html">http://www.phpstudy.net/a.php/193.html</a> 
+</p>
+<p>
+	14. 自带挂马监视器如何使用
+</p>
+<p>
+	使用『其他选项菜单』-『phpStudy设置』-『网站挂马监视器』<br />
+勾上跟随监视，会跟随phpStudy的启动自动监视。<br />
+参照：<a href="http://www.phpstudy.net/a.php/194.html">http://www.phpstudy.net/a.php/194.html</a> 
+</p>
+<p>
+	&nbsp;
+</p>
+</body>

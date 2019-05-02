@@ -5,6 +5,8 @@ ts_id int (11) not null,
 t_name varchar (50) not null,
 phone int (11) not null,
 course varchar(50) not null,
+attend int(50) not null,
+salary int(50) not null,
 foreign key (tlogin_id) references tb_login(login_id) on delete cascade on update cascade,
 foreign key (ts_id) references tb_schoolmaster(s_id)  on delete cascade on update cascade
 );

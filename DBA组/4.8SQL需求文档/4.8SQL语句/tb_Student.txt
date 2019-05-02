@@ -1,15 +1,15 @@
-
-
-create table tb_Student(
+create table tb_student(
 	stu_id int(11) primary key auto_increment,
 	name varchar(50) not null,
 	sex varchar(2) not null,
 	age int(10) not null,
-	email varchar (255) not null,
+	email varchar(255) not null,
 	slogin_id int(11) not null,
 	question varchar(255) not null,
 	answer varchar(255) not null,
-	FOREIGN KEY (slogin_id) REFERENCES tb_Login(login_id) on delete cascade on update cascade
+	Bcourse varchar(255) not null,
+	Fcourse varchar(255) not null,
+	Lcourse varchar(255) not null,
+	Rcourse varchar(255) not null,
+	foreign key tb_student(slogin_id) references tb_login(login_id) on delete cascade
 );
-
-

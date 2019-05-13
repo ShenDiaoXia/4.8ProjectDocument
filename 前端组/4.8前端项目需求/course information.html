@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>教育培训机构</title>
+    <style type="text/css">
+        body {
+            width: 400px;
+            height: 600px;
+            margin: 0 auto;
+            background: #e0e0e0;
+        }
+
+        input {
+            width: 400px;
+            height: 40px;
+            background: white;
+            border: 1px solid gray;
+            color: mediumseagreen;
+            text-align: left;
+        }
+
+        .addBtn {
+            width: 380px;
+            height: 40px;
+            background: mediumseagreen;
+            color: white;
+            margin-top: 40px;
+            border-radius: 10px;
+            outline: none;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<form class="list" method="post" style="margin-top: 30%"onclick="classInformation()">
+    <input type="submit" name="sub1" value="英语">
+    <input type="submit" name="sub2" value="数学">
+    <input type="submit" name="sub3" value="语文">
+    <input type="submit" name="sub4" value="历史">
+    <input type="submit" name="sub5" value="计算机">
+</form>
+</br></br></br>
+<form class="item" method="post">
+    <table border="1" cellspacing="0"style="border: white">
+        <tr style="color:dodgerblue;cursor: pointer;background: white">
+            <td>上一页</td>
+            <td>首页</td>
+            <td>尾页</td>
+            <td>下一页</td>
+        </tr>
+    </table>
+</form>
+<form>
+    <input type="button" class="addBtn" value="添加" method="post" onclick="jump()">
+</form>
+<script type="text/javascript">
+    function jump() {
+        window.open("create class.html");
+    }
+
+    var sub = document.getElementsByClassName("sub1");
+
+    function classInformation() {
+        window.open("class information.html");
+    }
+</script>
+</body>
+</html>

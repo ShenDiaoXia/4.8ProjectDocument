@@ -1,8 +1,0 @@
-create table tb_schoolmaster(
-s_id int(10) primary key  not null suto_increment,
-foreign key (slogin_id) references tb_login(login_id) on delete CASCADE on update cascade,
-s_name varchar(50) not null ,
-school varchar(50) not null,
-foreign key (stg_id) references tb_teachergroup(tg_id) on delete cascade on update cascade,
-foreign key (scg_id) references tb_coursegroup(cg_id)  on delete cascade on update cascade,
-);

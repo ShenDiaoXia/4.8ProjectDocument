@@ -5,89 +5,62 @@
     <title>教育培训机构</title>
     <style type="text/css">
         body {
-            background: #e0e0e0;
-            width: 600px;
-            height: 450px;
+            width: 40%;
             margin: 0 auto;
+            background: #e0e0e0;
         }
-
-        .item table {
-            margin: 20px auto;
+        .tr1 {
+            background-color: #02df82;
+            color: white;
+            font-size: 18px;
+            height: 40px;
         }
-
+        .tr2{
+            background-color: white;
+            font-size: 18px;
+            height: 45px;
+        }
     </style>
 </head>
 <body>
 <p style="text-align: center"><font size="6px">家长信息表</font></p>
 <form class="search">
-    <input type="text" style="width: 520px;height: 30px" value="" placeholder="家长姓名">
-    <div class="searBtn" style="width: 76px;height:36px;text-align:center;line-height: 35px;cursor: pointer;
+    <input type="text" style="width: 85%;height:30px" value="" placeholder="家长姓名">
+    <div class="searBtn" style="width:14%;height:36px;text-align:center;line-height: 35px;cursor: pointer;
     float: right;background: dodgerblue;color: white">搜索
     </div>
 </form>
-</br>
-<form class="list" method="post">
-    <table style="width:600px;height:40px;background: white;border: white" border="1" cellspacing="0">
-        <tr style="background:#2E8B57;color: white">
-            <th>编号</th>
-            <th>姓名</th>
-            <th>电话号码</th>
-            <th>购买课程</th>
-            <th>已上课程</th>
-            <th>未上课程</th>
-            <th>退回课程</th>
-            <th>操作</th>
+<br><br>
+<form>
+    <table  cellspacing="1" style="display:block;">
+        <tr class="tr1">
+            <td width="15%">编号</td>
+            <td width="15%">姓名</td>
+            <td width="20%">电话号码</td>
         </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td><input type="submit" style="background:dodgerblue;color: white " value="修改">
-                <input type="submit" style="background: firebrick;color: white ;float: right" value="删除">
-            </td>
+        <tr class="tr2">
+            <td>1</td>
+            <td>张三</td>
+            <td>18946117880</td>
         </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td><input type="submit" style="background:dodgerblue;color: white " value="修改">
-                <input type="submit" style="background: firebrick;color: white ;float: right" value="删除">
-            </td>
+        <tr class="tr2">
+            <td>2</td>
+            <td>李四</td>
+            <td>18946117881</td>
         </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td><input type="submit" style="background:dodgerblue;color: white " value="修改">
-                <input type="submit" style="background: firebrick;color: white;float: right " value="删除">
-            </td>
+        <tr class="tr2">
+            <td>3</td>
+            <td>王五</td>
+            <td>18946117882</td>
         </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td><input type="submit" style="background:dodgerblue;color: white " value="修改">
-                <input type="submit" style="background: firebrick;color: white ;float: right" value="删除">
-            </td>
+        <tr class="tr2">
+            <td>4</td>
+            <td>马六</td>
+            <td>18946117883</td>
         </tr>
     </table>
 </form>
+<br><br>
 <form class="item" method="post">
     <table border="1" cellspacing="0"style="border: white">
         <tr style="color:dodgerblue;cursor: pointer;background: white">

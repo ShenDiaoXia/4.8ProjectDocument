@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			body{list-style: none;}	
+			.list1-2{
+				position: absolute;
+				top: 38%;
+				left: 38%;
+		</style>
+		<script language="JavaScript">
+			function check(form){
+			if(form.classname.value == ""){ 
+				alert("课程名字不能为空");
+				return false;
+			}
+			else if(form.coursename.value == ""){ 
+				alert("班级名字不能为空");
+			return false;}
+			else if(form.teacher.value == ""){ 
+				alert("教师名字不能为空");
+			return false;}
+			else if(form.times.value == ""){ 
+				alert("时间不能为空");
+			return false;}
+			else if(form.place.value == ""){ 
+				alert("地点不能为空");
+			return false;}
+			else{
+				alert("保存成功");
+				return true;
+			}
+		}
+			</script>
+	</head>
+	<body>
+		<div class="list-1">
+			<div class="list1-2">
+				<form action="" method="post" onsubmit="return check(this)" >
+					<input type='classname' name='classname'  placeholder='课程名字' style="width: 300px; height: 20px;"><br  /><br  />
+					<input type='coursename' name='coursename' placeholder='班级名字'style="width: 300px; height: 20px;"><br  /><br  />
+					<input type='teacher' name='teacher' placeholder='教师'style="width: 300px; height: 20px;"><br  /><br  />
+					<input type='times' name='times' placeholder='时间'style="width: 300px; height: 20px;"><br  /><br  />
+					<input type='place' name='place' placeholder='地点'style="width: 300px; height: 20px;"><br  /><br  /><br  />
+					<input type="submit" value="保存" style="width: 300px; height: 40px; background-color: aquamarine;"><br  /><br  />
+				</form>
+			</div>
+	</div>
+	</body>
+</html>
